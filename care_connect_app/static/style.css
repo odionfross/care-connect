@@ -1,0 +1,11 @@
+.wrapper {
+	width: 900px;
+	text-align: center;
+	border: 2px solid black;
+	margin: auto;
+	padding: 10px;
+}
+
+p {
+	color: red;
+}
