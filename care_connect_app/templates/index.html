@@ -7,13 +7,45 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="wrapper">
-		<h1 style="color:blue;">Care Connect</h1>
-    	<p>Single page render and routing works.</p>
+	<div id="care_title">
+		<h1>Care Connect</h1>
+	</div>
+	<div class="col-xl-8 col-md-6">
+		<div class="card card-fluid">
+			<div class="card-header border-0">
+				<form class="care_search" action="/action_page.php">
+					<input type="text" placeholder="Search..." name="search">
+				  	<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div class="table-responsive">
+				<table class="table align-items-center">
+					<thead>
+						<tr>
+							<th scope="col" class="sort" data-sort="name">Col 1</th>
+							<th scope="col" class="sort" data-sort="name">Col 2</th>
+							<th scope="col" class="sort" data-sort="name">Col 3</th>
+							<th scope="col" class="sort" data-sort="name">Col 4</th>
+							<th scope="col" class="sort" data-sort="name">Col 5</th>
+							<th scope="col" class="sort" data-sort="name">Col 6</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">data 1</td>
+							<td scope="row">data 2</td>
+							<td scope="row">data 3</td>
+							<td scope="row">data 4</td>
+							<td scope="row">data 5</td>
+							<td scope="row"><a href="/">data 6</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

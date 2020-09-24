@@ -1,11 +1,37 @@
-.wrapper {
-	width: 900px;
-	text-align: center;
-	border: 2px solid black;
-	margin: auto;
-	padding: 10px;
+#care_title {
+	color: #00e6ac;
+	margin: 10px;
 }
 
-p {
-	color: red;
+.care_search {
+	display: flex;
+    margin: 30px;
+}
+
+form.care_search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.care_search button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.care_search button:hover {
+  background: #0b7dda;
+}
+
+thead {
+	background-color: #b3b3cc;
 }
