@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+</head>
+<body>
+    <form action="patient_information" method="post">
+        {% csrf_token %}
+        <!-- demographics -->
+        <label for="first_name">First name: </label>
+        <input id="first_name" type="text" name="first_name">
+        <label for="last_name">Last name: </label>
+        <input id="last_name" type="text" name="last_name">
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email">
+        <label for="street">Street: </label>
+        <input id="street" type="text" name="street">
+        <label for="city">City: </label>
+        <input id="city" type="text" name="city">
+        <label for="state">State: </label>
+        <input id="state" type="text" name="state">
+        <label for="zip_code">Zip Code: </label>
+        <input id="zip_code" type="text" name="zip_code">
+
+        <!-- shipping address -->
+        <label for="ship_street">Shipping Street: </label>
+        <input id="ship_street" type="text" name="ship_street">
+        <label for="ship_city">Shipping City: </label>
+        <input id="ship_city" type="text" name="ship_city">
+        <label for="ship_state">Shipping State: </label>
+        <input id="ship_state" type="text" name="ship_state">
+        <label for="ship_zip_code">Shipping Zip Code: </label>
+        <input id="ship_zip_code" type="text" name="ship_zip_code">
+
+        <!-- more information -->
+        <label for="dob">Date of Birth: </label>
+        <input id="dob" type="text" name="dob">
+        <label for="drug_name">Drug Name: </label>
+        <input id="drug_name" type="text" name="drug_name">
+        <label for="status">Program Status: </label>
+        <input id="status" type="text" name="status">
+        <label for="insurance">Insurance: </label>
+        <input id="insurance" type="text" name="insurance">
+        <label for="yearly_income">Yearly Income: </label>
+        <input id="yearly_income" type="text" name="yearly_income">
+        <label for="household_income">Household Income: </label>
+        <input id="household_income" type="text" name="household_income">
+        <label for="ssn">Social Security Number: </label>
+        <input id="ssn" type="text" name="ssn">
+        <!-- additional information -->
+        <label for="gender">Gender: </label>
+        <input id="gender" type="text" name="gender">
+        <label for="resident">US Resident: </label>
+        <input id="resident" type="text" name="resident">
+        <label for="veteran">Veteran: </label>
+        <input id="veteran" type="text" name="veteran">
+        <label for="disabled">Disabled: </label>
+        <input id="disabled" type="text" name="disabled">
+        <label for="allergies">Allergies: </label>
+        <input id="allergies" type="text" name="allergies">
+        <label for="health_conditions">Health Conditions: </label>
+        <input id="health_conditions" type="text" name="health_conditions">
+        <!-- insurance information -->
+        <label for="prescription_insurance">Prescription Insurance: </label>
+        <input id="prescription_insurance" type="text" name="prescription_insurance">
+        <label for="coverage_type">Coverage Type: </label>
+        <input id="coverage_type" type="text" name="coverage_type">
+        <label for="primary_name">Primary Company Name: </label>
+        <input id="primary_name" type="text" name="primary_name">
+        <label for="primary_phone">Primary Comany Phone: </label>
+        <input id="primary_phone" type="text" name="primary_phone">
+        <label for="primary_id">Primary ID: </label>
+        <input id="primary_id" type="text" name="primary_id">
+        <label for="primary_group">Primary Group: </label>
+        <input id="primary_group" type="text" name="primary_group">
+        <label for="primary_bin">Primary BIN: </label>
+        <input id="primary_bin" type="text" name="primary_bin">
+        <label for="secondary_name">Secondary Company Name: </label>
+        <input id="secondary_name" type="text" name="secondary_name">
+        <label for="secondary_phone">Secondary Company Phone: </label>
+        <input id="secondary_phone" type="text" name="secondary_phone">
+        <label for="secondary_id">Secondary ID: </label>
+        <input id="secondary_id" type="text" name="secondary_id">
+        <label for="secondary_group">Secondary Group: </label>
+        <input id="secondary_group" type="text" name="secondary_group">
+        <label for="secondary_bin">Secondary BIN: </label>
+        <input id="secondary_bin" type="text" name="secondary_bin">
+
+        <input type="submit" value="OK">
+    </form>
+
+</body>
+</html>
