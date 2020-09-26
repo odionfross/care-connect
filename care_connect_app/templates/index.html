@@ -8,29 +8,44 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="care_title">
-		<h1>Care Connect</h1>
+		<h2>CareConnect</h2>
+		<div id="top_right">
+			<img src="{% static "images/elephants.jpg" %}" alt="profile_pic" id="profile_pic"/>
+			<h5>Odion Fross</h5>
+			<span class="glyphicon glyphicon-triangle-bottom" id="top_arrow"></span>
+		</div>
 	</div>
-	<div class="col-xl-8 col-md-6">
-		<div class="card card-fluid">
-			<div class="card-header border-0">
+	<div id="care_body">
+		<div class="sidenav">
+			<a href="#about"><span class="glyphicon glyphicon-th" class="my_nav"></span><h4>Dashboard</h4></a>
+		  	<a href="#services"><span class="glyphicon glyphicon-user" class="my_nav"></span><h4>Patients</h4></a>
+		  	<a href="#clients"><span class="glyphicon glyphicon-folder-close" class="my_nav"></span><h4>Programs</h4></a>
+		  	<a href="#contact"><span class="glyphicon glyphicon-tasks" class="my_nav"></span><h4>Tasks</h4></a>
+		</div>
+		<div>
+			<h3>Search Program Name</h3>
+			<div class="card-header border-0" id="search_block">
+				<input type="text" value="Manufacturer" name="search" id="manufacturer">
 				<form class="care_search" action="/action_page.php">
 					<input type="text" placeholder="Search..." name="search">
-				  	<button type="submit"><i class="fa fa-search"></i></button>
+				  	<button type="submit"><span class="glyphicon glyphicon-search" id="search_btn"></span></button>
 				</form>
 			</div>
 			<div class="table-responsive">
 				<table class="table align-items-center">
 					<thead>
 						<tr>
-							<th scope="col" class="sort" data-sort="name">Col 1</th>
-							<th scope="col" class="sort" data-sort="name">Col 2</th>
-							<th scope="col" class="sort" data-sort="name">Col 3</th>
-							<th scope="col" class="sort" data-sort="name">Col 4</th>
-							<th scope="col" class="sort" data-sort="name">Col 5</th>
-							<th scope="col" class="sort" data-sort="name">Col 6</th>
+							<th scope="col" class="sort" data-sort="name">Drug Name</th>
+							<th scope="col" class="sort" data-sort="name">Generic Name</th>
+							<th scope="col" class="sort" data-sort="name">Disease State</th>
+							<th scope="col" class="sort" data-sort="name">Manufacturer</th>
+							<th scope="col" class="sort" data-sort="name">Program</th>
+							<th scope="col" class="sort" data-sort="name"></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -40,7 +55,7 @@
 							<td scope="row">data 3</td>
 							<td scope="row">data 4</td>
 							<td scope="row">data 5</td>
-							<td scope="row"><a href="/">data 6</a></td>
+							<td scope="row"><a href="/"><button class="info_btn">More Information</button></a></td>
 						</tr>
 					</tbody>
 				</table>

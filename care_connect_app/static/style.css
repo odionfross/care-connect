@@ -1,37 +1,169 @@
+* {
+  background-color: #f9f6f6;
+}
+
 #care_title {
 	color: #00e6ac;
-	margin: 10px;
+	margin: 20px 0px;
+  background-color: white;
+  display: inherit;
+}
+
+h2 {
+  margin: auto 20px;
+  padding: 0px 20px 5px;
+  background-color: white;
+  display: inline-block;
+}
+
+#top_right {
+  display: inline-block;
+  background: white;
+  padding: 0px 20px 5px;
+  color: black;
+  margin-left: 700px;
+}
+
+#profile_pic {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+h5 {
+  color: black;
+  display: inline-block;
+  background-color: white;
+}
+
+#top_arrow {
+  background-color: white;
+}
+
+#care_body {
+  display: flex;
+  /*margin: 10px 30px;*/
+}
+
+.sidenav {
+  width: 300px;
+  /*position: fixed;*/
+  /*z-index: 1;*/
+  /*top: 20px;*/
+  /*left: 10px;*/
+  /*background: #eee;
+  overflow-x: hidden;*/
+  padding: 8px 0;
+  margin: 10px 30px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: flex;
+  border-radius: 5px;
+}
+
+.navbar {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+
+.sidenav a:hover {
+  color: white;
+  background-color: #00e6ac;
+  text-decoration: none;
+}
+
+.sidenav h4:hover {
+  color: white;
+  background-color: #00e6ac;
+}
+
+/*.my_nav a :hover {
+
+}*/
+
+.sidenav a .glyphicon:hover {
+  color: white;
+  background-color: #00e6ac;
+}
+
+
+h4 {
+  margin: 5px 20px;
+}
+
+h3 {
+  margin: 10px 200px;
+}
+
+#search_block {
+  display: flex;
+  margin: 25px;
+}
+
+#manufacturer {
+  width: 150px;
+  height: 20px;
+  padding: 19px;
+  margin: auto 5px;
+  background-color: white;
+  border: 1px solid white;
 }
 
 .care_search {
 	display: flex;
-    margin: 30px;
+  height: 40px;
+  /*margin: 30px;*/
 }
 
 form.care_search input[type=text] {
   padding: 10px;
   font-size: 17px;
-  border: 1px solid grey;
-  width: 80%;
-  background: #f1f1f1;
+  border: 1px solid white;
+  width: 500px;
+  background: white;
 }
 
 form.care_search button {
   float: left;
   width: 20%;
   padding: 10px;
-  background: #2196F3;
-  color: white;
+  background: white;
+  /*color: white;*/
   font-size: 17px;
-  border: 1px solid grey;
+  border: 1px solid #f9f6f6;
   border-left: none;
   cursor: pointer;
 }
 
 form.care_search button:hover {
-  background: #0b7dda;
+  background: white;
+}
+
+#search_btn {
+  background: white;
+}
+
+#search_btn:hover {
+  background: white;
 }
 
 thead {
 	background-color: #b3b3cc;
+}
+
+.info_btn {
+  color: #00e6ac;
+  border: 2px solid #00e6ac;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.info_btn a {
+  color: #00e6ac;
 }
