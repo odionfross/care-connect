@@ -9,7 +9,7 @@
   display: inherit;
 }
 
-h2 {
+.care_name {
   margin: auto 20px;
   padding: 0px 20px 5px;
   background-color: white;
@@ -46,7 +46,7 @@ h5 {
 }
 
 .sidenav {
-  width: 300px;
+  width: 220px;
   /*position: fixed;*/
   /*z-index: 1;*/
   /*top: 20px;*/
@@ -141,6 +141,10 @@ form.care_search button:hover {
   background: white;
 }
 
+#table_row th{
+  background-color: #d0cccc;
+}
+
 #search_btn {
   background: white;
 }
@@ -163,3 +167,111 @@ thead {
 .info_btn a {
   color: #00e6ac;
 }
+
+#detail {
+  margin: 15px;
+
+}
+
+#detail_top {
+  background-color: white;
+  padding: 25px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 950px;
+}
+
+#detail_top_title {
+  background-color: white;
+}
+
+#detail_top_details {
+  background-color: white;
+}
+
+#detail_top_details span {
+  background-color: white;
+}
+
+#detail_top_details span b {
+  background-color: white;
+}
+
+#detail_bottom {
+  background-color: white;
+  padding: 25px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 950px;
+}
+
+#detail_bottom_sub {
+  display: flex;
+  background-color: white;
+}
+
+#detail_bottom_btn {
+  padding: 6px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  border-radius: 5px;
+  background-color: #00e6ac;
+  height: 50px;
+  margin-left: 450px;
+  margin-top: 20px;
+}
+
+#detail_bottom_title {
+  background-color: white;
+}
+
+#detail_tab {
+  background-color: white;
+}
+
+#patient_info {
+  background-color: white;
+}
+
+#patient_info li {
+  background-color: white;
+}
+
+#search_popup {
+  width:950px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#search_div {
+  background-color: white;
+}
+
+#patient_search {
+  display: flex;
+  margin: 30px 200px;
+}
+
+#patient_table {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#patient_table table thead tr th{
+  background-color: white;
+}
+
+#patient_table table tbody tr td{
+  background-color: white;
+}
+
+#apply_btn {
+  width: 200px;
+  color: white;
+  background-color: #00e6ac;
+  margin: auto 350px;
+}
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Connect</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="care_title">
+		<h2 class="care_name">CareConnect</h2>
+		<div id="top_right">
+			<img src="{% static "images/elephants.jpg" %}" alt="profile_pic" id="profile_pic"/>
+			<h5>Odion Fross</h5>
+			<span class="glyphicon glyphicon-triangle-bottom" id="top_arrow"></span>
+		</div>
+	</div>
+	<div id="care_body">
+		<div class="sidenav">
+			<a href="#about"><span class="glyphicon glyphicon-th" class="my_nav"></span><h4>Dashboard</h4></a>
+		  	<a href="#services"><span class="glyphicon glyphicon-user" class="my_nav"></span><h4>Patients</h4></a>
+		  	<a href="#clients"><span class="glyphicon glyphicon-folder-close" class="my_nav"></span><h4>Programs</h4></a>
+		  	<a href="#contact"><span class="glyphicon glyphicon-tasks" class="my_nav"></span><h4>Tasks</h4></a>
+		</div>
+		<div>
+			<span id="detail">< All Programs</span>
+			<div id="detail_top">
+				<h2 id="detail_top_title">Ibrance is manufactured by Pfizer Inc</h2>
+				<h5>Pfizer Oncology</h5>
+				<div id="detail_top_details">
+					<span><b>Address : </b> St Lious MD, P O Box 66858</span>
+					<span><b>Phone Number : </b> 1-800-707-8965</span>
+					<span><b>Fax Number : </b> 1-800-707-8965</span>
+					<span><b>Website : </b> connecttocare.com</span>
+				</div>
+			</div>
+			<div class="container" id="detail_bottom">
+				<div id="detail_bottom_sub">
+					<h2 id="detail_bottom_title">Program Eligibility</h2>
+					<button id="detail_bottom_btn">Enroll Patient(s)</button>
+				</div>
+			  	<ul class="nav nav-tabs" id="detail_tab">
+				    <li class="active"><a href="#">Eligibility Information</a></li>
+				    <li><a href="#">Additional Information</a></li>
+				</ul>
+				<br>
+			  	<ul id="patient_info">
+			  		<li>Patients must not</li>
+			  		<li>Patients must not</li>
+			  	</ul>
+			</div>
+			<div class="table-responsive" id="search_popup">
+				<div class="card-header border-0" id="search_div">
+					<form class="care_search" action="/action_page.php" id="patient_search">
+						<button type="submit"><span class="glyphicon glyphicon-search" id="search_btn"></span></button>
+						<input type="text" placeholder="Search..." name="search">
+					</form>
+				</div>
+				<form action="submit_selection" id="patient_table">
+					<table class="table align-items-center">
+						<thead>
+							<tr id="patient_row">
+								<th scope="col" class="sort" data-sort="name"></th>
+								<th scope="col" class="sort" data-sort="name">Last Name</th>
+								<th scope="col" class="sort" data-sort="name">First Name</th>
+								<th scope="col" class="sort" data-sort="name">D.O.B.</th>
+								<th scope="col" class="sort" data-sort="name">Address</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" id="patient_details" name="patient_details"></td>
+								<td scope="row">Gregory</td>
+								<td scope="row">Smith</td>
+								<td scope="row">01/27/1985</td>
+								<td scope="row">1000 West 10th Street, Sheridan, Wyoming</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="patient_details" name="patient_details"></td>
+								<td scope="row">Chris</td>
+								<td scope="row">Summers</td>
+								<td scope="row">01/27/1985</td>
+								<td scope="row">1000 West 10th Street, Sheridan, Wyoming</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="info_btn" id="apply_btn">Apply</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

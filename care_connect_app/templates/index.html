@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div id="care_title">
-		<h2>CareConnect</h2>
+		<h2 class="care_name">CareConnect</h2>
 		<div id="top_right">
 			<img src="{% static "images/elephants.jpg" %}" alt="profile_pic" id="profile_pic"/>
 			<h5>Odion Fross</h5>
@@ -39,7 +39,7 @@
 			<div class="table-responsive">
 				<table class="table align-items-center">
 					<thead>
-						<tr>
+						<tr id="table_row">
 							<th scope="col" class="sort" data-sort="name">Drug Name</th>
 							<th scope="col" class="sort" data-sort="name">Generic Name</th>
 							<th scope="col" class="sort" data-sort="name">Disease State</th>
@@ -49,6 +49,14 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<td scope="row">data 1</td>
+							<td scope="row">data 2</td>
+							<td scope="row">data 3</td>
+							<td scope="row">data 4</td>
+							<td scope="row">data 5</td>
+							<td scope="row"><a href="/"><button class="info_btn">More Information</button></a></td>
+						</tr>
 						<tr>
 							<td scope="row">data 1</td>
 							<td scope="row">data 2</td>
