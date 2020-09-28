@@ -3,7 +3,8 @@ from .models import *
 
 def index(request):
     context = {
-        'manufacturers' : Manufacturers.objects.all()
+        'manufacturers' : Manufacturers.objects.all(),
+        'drugs' : Drug.objects.all()
     }
     return render(request, 'index.html', context)
 
@@ -27,6 +28,7 @@ def inputmanu(request):
 
 def inputdrugs(request):
     if request.method == 'POST':
-        new_address = Address.objects.create(street=request.POST['street'], city=request.POST['city'], state=request.POST['state'], zipcode=request.POST['zipcode'])
-        new_manufacturer = Manufacturers.objects.create(name=request.POST['name'],address = new_address, phone=request.POST['phone'],fax=request.POST['fax'],website=request.POST['website'])
+        new_drug = Drug.objects.create(name=request.POST['name'])
+        new_drug.manufacturer.set(Manufacturers.objects.filter(name = request.POST['manufacturer']))
+        new_drug.save(),
     return redirect('/')

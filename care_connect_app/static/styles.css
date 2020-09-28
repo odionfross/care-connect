@@ -1,0 +1,275 @@
+* {
+    background-color: #f9f6f6;
+  }
+  
+  #care_title {
+      color: #00e6ac;
+      margin: 20px 0px;
+    background-color: white;
+    display: inherit;
+  }
+  
+  .care_name {
+    margin: auto 20px;
+    padding: 0px 20px 5px;
+    background-color: white;
+    display: inline-block;
+  }
+  
+  #top_right {
+    display: inline-block;
+    background: white;
+    padding: 0px 20px 5px;
+    color: black;
+    margin-left: 700px;
+  }
+  
+  #profile_pic {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+  
+  h5 {
+    color: black;
+    display: inline-block;
+    background-color: white;
+  }
+  
+  #top_arrow {
+    background-color: white;
+  }
+  
+  #care_body {
+    display: flex;
+    /*margin: 10px 30px;*/
+  }
+  
+  .sidenav {
+    width: 220px;
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*top: 20px;*/
+    /*left: 10px;*/
+    /*background: #eee;
+    overflow-x: hidden;*/
+    padding: 8px 0;
+    margin: 10px 30px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    border-radius: 5px;
+  }
+  
+  .navbar {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+  }
+  
+  .sidenav a:hover {
+    color: white;
+    background-color: #00e6ac;
+    text-decoration: none;
+  }
+  
+  .sidenav h4:hover {
+    color: white;
+    background-color: #00e6ac;
+  }
+  
+  .sidenav a .glyphicon:hover {
+    color: white;
+    background-color: #00e6ac;
+  }
+  
+  
+  h4 {
+    margin: 5px 20px;
+  }
+  
+  h3 {
+    margin: 10px 200px;
+  }
+  
+  #search_block {
+    display: flex;
+    margin: 25px;
+  }
+  
+  #manufacturer {
+    width: 150px;
+    height: 20px;
+    padding: 19px;
+    margin: auto 5px;
+    background-color: white;
+    border: 1px solid white;
+  }
+  
+  .care_search {
+      display: flex;
+    height: 40px;
+    /*margin: 30px;*/
+  }
+  
+  form.care_search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid white;
+    width: 500px;
+    background: white;
+  }
+  
+  form.care_search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: white;
+    /*color: white;*/
+    font-size: 17px;
+    border: 1px solid #f9f6f6;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.care_search button:hover {
+    background: white;
+  }
+  
+  #table_row th{
+    background-color: #d0cccc;
+  }
+  
+  #search_btn {
+    background: white;
+  }
+  
+  #search_btn:hover {
+    background: white;
+  }
+  
+  thead {
+      background-color: #b3b3cc;
+  }
+  
+  .info_btn {
+    color: #00e6ac;
+    border: 2px solid #00e6ac;
+    border-radius: 5px;
+    padding: 7px;
+  }
+  
+  .info_btn a {
+    color: #00e6ac;
+  }
+  
+  #detail {
+    margin: 15px;
+  
+  }
+  
+  #detail_top {
+    background-color: white;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 950px;
+  }
+  
+  #detail_top_title {
+    background-color: white;
+  }
+  
+  #detail_top_details {
+    background-color: white;
+  }
+  
+  #detail_top_details span {
+    background-color: white;
+  }
+  
+  #detail_top_details span b {
+    background-color: white;
+  }
+  
+  #detail_bottom {
+    background-color: white;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 950px;
+  }
+  
+  #detail_bottom_sub {
+    display: flex;
+    background-color: white;
+  }
+  
+  #detail_bottom_btn {
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    border-radius: 5px;
+    background-color: #00e6ac;
+    height: 50px;
+    margin-left: 450px;
+    margin-top: 20px;
+  }
+  
+  #detail_bottom_title {
+    background-color: white;
+  }
+  
+  #detail_tab {
+    background-color: white;
+  }
+  
+  #patient_info {
+    background-color: white;
+  }
+  
+  #patient_info li {
+    background-color: white;
+  }
+  
+  #search_popup {
+    width:950px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  #search_div {
+    background-color: white;
+  }
+  
+  #patient_search {
+    display: flex;
+    margin: 30px 200px;
+  }
+  
+  #patient_table {
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  #patient_table table thead tr th{
+    background-color: white;
+  }
+  
+  #patient_table table tbody tr td{
+    background-color: white;
+  }
+  
+  #apply_btn {
+    width: 200px;
+    color: white;
+    background-color: #00e6ac;
+    margin: auto 350px;
+  }
+  

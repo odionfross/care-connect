@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Care Connect</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    <h1>Care Connect</h1>
-    <p>Single page render and routing works</p>
-
-    <form action="/inputdrug" method="POST">
-        <h1>Manufacturer Entry</h1>
-        {% csrf_token %}
-        <label for="manname">Manufacturer Name</label>
-        <input type="text" name="name" class="form-control" placeholder="Manufacturer Name" id="manname">
-        <input type="submit" class="btn btn-success">
-    </form>
-    <table class="table table-dark">
-        <h1>Manufacturers:</h1>
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Website</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for manufacturer in manufacturers %}
-            <tr>
-                <th scope="row">{{manufacturer.id}}</th>
-                <td>{{manufacturer.name}}</td>
-                <td>{{manufacturer.address.street}}, {{manufacturer.address.city}}, {{manufacturer.address.state}}</td>
-                <td>{{manufacturer.phone}}</td>
-                <td>{{manufacturer.website}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+	<div id="care_title">
+		<h2 class="care_name">CareConnect</h2>
+		<div id="top_right">
+			<img src="{% static "images/elephants.jpg" %}" alt="profile_pic" id="profile_pic"/>
+			<h5>Odion Fross</h5>
+			<span class="glyphicon glyphicon-triangle-bottom" id="top_arrow"></span>
+		</div>
+	</div>
+	<div id="care_body">
+		<div class="sidenav">
+			<a href="#about"><span class="glyphicon glyphicon-th" class="my_nav"></span><h4>Dashboard</h4></a>
+		  	<a href="#services"><span class="glyphicon glyphicon-user" class="my_nav"></span><h4>Patients</h4></a>
+		  	<a href="#clients"><span class="glyphicon glyphicon-folder-close" class="my_nav"></span><h4>Programs</h4></a>
+		  	<a href="#contact"><span class="glyphicon glyphicon-tasks" class="my_nav"></span><h4>Tasks</h4></a>
+		</div>
+		<div>
+			<h3>Search Program Name</h3>
+			<div class="card-header border-0" id="search_block">
+				<input type="text" value="Manufacturer" name="search" id="manufacturer">
+				<form class="care_search" action="/action_page.php">
+					<input type="text" placeholder="Search..." name="search">
+				  	<button type="submit"><span class="glyphicon glyphicon-search" id="search_btn"></span></button>
+				</form>
+			</div>
+			<div class="table-responsive">
+				<table class="table align-items-center">
+					<thead>
+						<tr id="table_row">
+							<th scope="col" class="sort" data-sort="name">Drug Name</th>
+							<th scope="col" class="sort" data-sort="name">Generic Name</th>
+							<th scope="col" class="sort" data-sort="name">Disease State</th>
+							<th scope="col" class="sort" data-sort="name">Manufacturer</th>
+							<th scope="col" class="sort" data-sort="name">Program</th>
+							<th scope="col" class="sort" data-sort="name"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">data 1</td>
+							<td scope="row">data 2</td>
+							<td scope="row">data 3</td>
+							<td scope="row">data 4</td>
+							<td scope="row">data 5</td>
+							<td scope="row"><a href="/"><button class="info_btn">More Information</button></a></td>
+						</tr>
+						<tr>
+							<td scope="row">data 1</td>
+							<td scope="row">data 2</td>
+							<td scope="row">data 3</td>
+							<td scope="row">data 4</td>
+							<td scope="row">data 5</td>
+							<td scope="row"><a href="/"><button class="info_btn">More Information</button></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 </body>
-
 </html>
