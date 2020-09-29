@@ -29,6 +29,10 @@ def inputmanu(request):
 def inputdrugs(request):
     if request.method == 'POST':
         new_drug = Drug.objects.create(name=request.POST['name'])
-        new_drug.manufacturer.set(Manufacturers.objects.filter(name = request.POST['manufacturer']))
-        new_drug.save(),
+    return redirect('/')
+
+def inputgeneric(request):
+    if request.method == 'POST':
+        new_generic = Generics.objects.create(name=request.POST['name'])
+        m1 = Manufacturers.objects.get(id=(request.session['manufacturer']))
     return redirect('/')
