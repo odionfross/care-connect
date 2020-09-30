@@ -55,7 +55,7 @@ ROOT_URLCONF = 'care_connect.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'apps/template'),'/var/www/html/web/'],
+        'DIRS': [os.path.join(BASE_DIR, 'care_connect_app/template'),'/var/www/html/web/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Care Connect</title>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-
 <body>
-    <h1>Care Connect</h1>
-    <p>Single page render and routing works</p>
-
     <form action="/inputdrugs" method="POST">
-        <h1>Manufacturer Entry</h1>
+        <h1>Drug Entry</h1>
         {% csrf_token %}
         <label for="drugname">Drug Name</label>
         <input type="text" name="name" class="form-control" placeholder="Drug Name" id="drugname">
+        <h5>Manufacturer:</h5>
+        <select name="manufacturer" id="manufacturer">
+            {% for manufacturer in manufacturers %}
+            <option value="{{manufacturer.id}}">{{manufacturer.name}}</option>
+            {% endfor %}
+        </select>
+        <h5>Disease:</h5>
+        <select name="disease" id="disease">
+            {% for disease in diseases %}
+            <option value="{{disease.id}}">{{disease.name}}</option>
+            {% endfor %}
+        </select>
+        <br>
         <input type="submit" class="btn btn-success">
     </form>
     <table class="table table-dark">
@@ -40,6 +38,7 @@
                 <th scope="row">{{drug.id}}</th>
                 <td>{{drug.name}}</td>
                 <td>{{drug.manufacturer.name}}</td>
+                <td>{{drug.disease.name}}</td>
             </tr>
             {% endfor %}
         </tbody>
