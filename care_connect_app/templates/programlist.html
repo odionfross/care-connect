@@ -7,7 +7,6 @@
     <title>Care Connect</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -30,23 +29,28 @@
                 <table class="table align-items-center">
                     <thead>
                         <tr id="table_row">
-                            <th scope="col" class="sort" data-sort="name">Drug Name</th>
-                            <th scope="col" class="sort" data-sort="name">Generic Name</th>
-                            <th scope="col" class="sort" data-sort="name">Disease State</th>
-                            <th scope="col" class="sort" data-sort="name">Manufacturer</th>
                             <th scope="col" class="sort" data-sort="name">Program</th>
-                            <th scope="col" class="sort" data-sort="name"></th>
+                            <th scope="col" class="sort" data-sort="name">Disease</th>
+                            <th scope="col" class="sort" data-sort="name">Status</th>
+                            <th scope="col" class="sort" data-sort="name">Income Restrictions (Single)</th>
+                            <th scope="col" class="sort" data-sort="name">Income Restrictions (Married)</th>
+                            <th scope="col" class="sort" data-sort="name">Income Restrictions (Other)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for drug in drugs %}
+                        {% for program in programs %}
                         <tr>
-                            <td scope="row">{{drug.name}}</td>
-                            <td scope="row">{{drug.manufacturer.name}}</td>
-                            <td scope="row">{{drug.disease.name}}</td>
-                            <td scope="row">data 4</td>
-                            <td scope="row">data 5</td>
-                            <td scope="row"><a href="/"><button class="info_btn">More Information</button></a></td>
+                            <td scope="row">{{program.name}}</td>
+                            <td scope="row">{{program.disease.name}}</td>
+                            {% if program.active is True %}
+                            <td scope="row"><p>Active</p></td>
+                            {% endif %}
+                            {% if program.active is False %}
+                            <td scope="row"><p>Not Active</p></td>
+                            {% endif %}
+                            <td scope="row">{{program.singinc}}</td>
+                            <td scope="row">{{program.coupinc}}</td>
+                            <td scope="row">{{program.otherinc}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

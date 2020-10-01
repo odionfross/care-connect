@@ -56,6 +56,8 @@ def inputinfo(request):
         'patients': Patient.objects.all(),
         'generics': Generics.objects.all(),
         'diseases': Diseases.objects.all(),
+        'programs': Program.objects.all(),
+        'forms': ProgForms.objects.all(),
     }
     return render(request, 'inputinfo.html', context)
 
@@ -87,3 +89,20 @@ def inputpatient(request):
         relDrug = Drug.objects.get(id=request.POST['drug'])
         new_info = PatientInfo.objects.create(patient=pat, insurance = request.POST['insurance'], gender = request.POST['gender'], resident = request.POST['resident'], veteran=request.POST['veteran'], disabled=request.POST['disabled'],allergies=request.POST['allergies'],yearly_income=request.POST['yearly_income'],household_income=request.POST['household_income'],health_conditions=request.POST['healthconditions'], diseases=dis, drug=relDrug)
     return redirect('/inputinfo')
+
+def inputprog(request):
+    if request.method == 'POST':
+        relatedForm = ProgForms.objects.get(id=request.POST['form'])
+        relatedDisease = Diseases.objects.get(id=request.POST['disease'])
+        new_address = Address.objects.create(
+            street=request.POST['street'], city=request.POST['city'], state=request.POST['state'], zipcode=request.POST['zipcode'])
+        new_prog = Program.objects.create(name=request.POST['name'],address=new_address,singinc=request.POST['single_income'],coupinc=request.POST['couple_income'],otherinc=request.POST['other_income'],active=request.POST['active'],form=relatedForm, disease=relatedDisease) 
+    return redirect('/inputinfo')
+
+def inputprogform(request):
+    if request.method == 'POST':
+        new_form = ProgForms.objects.create(name=request.POST['name'])
+    return redirect('/inputinfo')
+
+def application(request):
+    return render(request, 'application.html')

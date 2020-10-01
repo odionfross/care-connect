@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Care Connect</title>
+    {% load static %}
+</head>
+
+<body id="datainput">
+
+    {% include 'header.html' %}
+    {% include 'sidebar.html' %}
+    <form action="/inputmanu" method="POST">
+        <h1>Insurance Coverage</h1>
+        {% csrf_token %}
+        <input type="hidden" name="patient" value="patient.id">
+        <h4>Do you have Prescription Drug Coverage?</h4>
+        <input type="radio" name="prescription_coverage" id="prescription_coverage">
+        <label for="prescription_coverage">I have prescription drug coverage.</label>
+        <input type="radio" name="prescription_coverage" id="no_prescription_coverage">
+        <label for="no_prescription_coverage">I do not have prescription drug coverage.</label><br>
+        <label for="coverage_type">Coverage Type</label>
+        <input type="text" name="coverage_type" id="coverage_type"><br>
+        <label for="coverage_other">Coverage Other</label>
+        <input type="text" name="coverage_other" id="coverage_other"><br>
+        <label for="primary_name">Primary Name:</label>
+        <input type="text" name="primary_name" id="primary_name"><br>
+        <label for="primary_phone">Primary Phone:</label>
+        <input type="text" name="primary_phone" id="primary_phone"><br>
+        <label for="primary_id">Primary Id Number:</label>
+        <input type="text" name="primary_id" id="primary_id"><br>
+        <label for="primary_group">Primary Group Number:</label>
+        <input type="text" name="primary_group" id="primary_group"><br>
+        <label for="primary_bin">Primary Bin:</label>
+        <input type="text" name="primary_bin" id="primary_bin"><br>
+        <label for="relation">Relation to Patient:</label>
+        <input type="text" name="relation" id="relation"><br>
+        <input type="submit" class="btn btn-success" value="Submit Insurance Coverage">
+    </form>
+</body>

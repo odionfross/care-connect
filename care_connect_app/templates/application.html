@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Connect</title>
+    {% load static %}
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'sidebar.html' %}
+    <div class="rsidebody">
+			<span id="patient_top">< Back</span>
+			<div id="detail_top">
+				<h2 id="detail_top_title">New Patient's Application Form</h2>
+				<div>
+					<form id="newcus">
+						<h5>Please check one of the following:</h5>
+						<br>
+						<input type="radio" name="existing" value="existing">
+						<label for="existing">I am an existing</label>
+						<input type="radio" name="new" value="new">
+						<label for="new">I am a new patient</label>
+						<br>
+						<h5 id="pt_name">Patient name</h5>
+						<h5>Date of birth</h5>
+						<br>
+						<input type="text" id="patient_name" name="patient_name">
+						<input type="date" id="dob" name="bod">
+						<base></base>
+						<br>
+						<div class="newpatient_info">
+							<div class="patient_data">
+								<h5>Gender</h5>
+								<br>
+								<input type="radio" name="male" value="male">
+								<label for="male">male</label>
+								<input type="radio" name="female" value="female">
+								<label for="female">female</label>
+								<br>
+								<h5>US Resident</h5>
+								<br>
+								<input type="radio" name="yes" value="yes">
+								<label for="yes">Yes</label>
+								<input type="radio" name="no" value="no">
+								<label for="no">No</label>
+							</div>
+							<div class="patient_data">
+								<h5>Veteran</h5>
+								<br>
+								<input type="radio" name="vet" value="vet">
+								<label for="vet">Yes</label>
+								<input type="radio" name="notvet" value="notvet">
+								<label for="notvet">No</label>
+								<br>
+								<h5>Disabled</h5>
+								<br>
+								<input type="radio" name="disabled" value="disabled">
+								<label for="disabled">Yes</label>
+								<input type="radio" name="notdisabled" value="notdisabled">
+								<label for="notdisabled">No</label>
+							</div>
+						</div>
+						<h5 id="pt_name">Mailing Address</h5> <br>
+						<input type="text" id="address" name="address">
+						<br>
+						<h5 id="city">City</h5>
+						<h5 id="state">State</h5>
+						<h5 id="zip">Zip</h5>
+						<br>
+						<input type="text" id="city_data" name="city">
+						<input type="text" id="state_data" name="state">
+						<input type="text" id="zip_data" name="zip">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

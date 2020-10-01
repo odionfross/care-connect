@@ -93,7 +93,7 @@ class PatientInfo(models.Model):
 
 
 class Insurance(models.Model):
-    insurance = models.ForeignKey(
+    patient = models.ForeignKey(
         Patient, related_name="patient_coverage", on_delete=models.CASCADE)
     prescription_coverage = models.BooleanField()
     coverage_type = models.CharField(max_length=100)
@@ -103,12 +103,6 @@ class Insurance(models.Model):
     primary_id = models.CharField(max_length=100, blank=True)
     primary_group = models.CharField(max_length=100, blank=True)
     primary_bin = models.CharField(max_length=100, blank=True)
-    secondary_name = models.CharField(max_length=100, blank=True)
-    secondary_phone = models.CharField(max_length=100, blank=True)
-    secondary_id = models.CharField(max_length=100, blank=True)
-    secondary_group = models.CharField(max_length=100, blank=True)
-    secondary_bin = models.CharField(max_length=100, blank=True)
     relation = models.CharField(max_length=100)
-    relation_other = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

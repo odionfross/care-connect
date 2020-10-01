@@ -1,7 +1,3 @@
-* {
-    background-color: #f9f6f6;
-  }
-  
   #care_title {
       color: #00e6ac;
       margin: 20px 0px;
@@ -21,7 +17,7 @@
     background: white;
     padding: 0px 20px 5px;
     color: black;
-    margin-left: 700px;
+    margin-left: 75%;
   }
   
   #profile_pic {
@@ -435,6 +431,14 @@
 #zip_data {
   margin-left: 100px;
 }
+#crew{
+  width: 90%;
+  height: auto;
+}
 
+#mission{
+  text-align: center;
+  margin-left: auto;
+}
 
 /*application.html styles ends here*/
