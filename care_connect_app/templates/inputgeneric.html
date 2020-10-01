@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 <body>
     <form action="/inputgeneric" method="POST">
@@ -8,7 +10,7 @@
         <label for="drugname">Generic Name</label>
         <input type="text" name="name" class="form-control" placeholder="Drug Name" id="drugname">
         <h5>Manufacturer:</h5>
-        <select name="manufacturer" id="manufacturer">
+        <select name="manufacturer">
             {% for manufacturer in manufacturers %}
             <option value="{{manufacturer.id}}">{{manufacturer.name}}</option>
             {% endfor %}
@@ -44,6 +46,7 @@
                 <th scope="row">{{generic.id}}</th>
                 <td>{{generic.name}}</td>
                 <td>{{generic.manufacturer.name}}</td>
+                <td>{{generic.disease.name}}</td>
             </tr>
             {% endfor %}
         </tbody>

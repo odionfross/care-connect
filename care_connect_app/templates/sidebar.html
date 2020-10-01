@@ -7,7 +7,6 @@
     <title>Care Connect</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,12 +14,20 @@
 </head>
 
 <body>
-    <div id="care_title">
-        <h2 class="care_name">CareConnect</h2>
-        <div id="top_right">
-            <img src="{% static "images/elephants.jpg" %}" alt="profile_pic" id="profile_pic" />
-            <h5>Odion Fross</h5>
-            <span class="glyphicon glyphicon-triangle-bottom" id="top_arrow"></span>
+    <div id="care_body">
+        <div class="sidenav">
+            <a href="/"><span class="glyphicon glyphicon-th" class="my_nav"></span>
+                <h4>Dashboard</h4>
+            </a>
+            <a href="/patients"><span class="glyphicon glyphicon-user" class="my_nav"></span>
+                <h4>Patients</h4>
+            </a>
+            <a href="/programs"><span class="glyphicon glyphicon-folder-close" class="my_nav"></span>
+                <h4>Programs</h4>
+            </a>
+            <a href="/inputinfo"><span class="glyphicon glyphicon-tasks" class="my_nav"></span>
+                <h4>Input Data</h4>
+            </a>
         </div>
     </div>
-  
+</body>

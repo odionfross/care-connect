@@ -30,25 +30,24 @@ def inputmanu(request):
 
 def inputdrugs(request):
     if request.method == 'POST':
-        new_drug = Drug.objects.create(name=request.POST['name'])
-        new_manufacturer = Manufacturers.objects.get(id=request.POST['manufacturer'])
-        new_disease = Diseases.objects.get(id=(request.POST['disease']))
-        new_drug.manufacturer.add(new_manufacturer)
-        new_drug.disease.add(new_disease)
-        new_drug.save()
+        dis = Diseases.objects.get(id=request.POST['disease'])
+        man = Manufacturers.objects.get(id=request.POST['manufacturer'])
+        new_drug = Drug.objects.create(name=request.POST['name'],manufacturer = man,disease = dis)
     return redirect('/inputinfo')
 
 
 def inputgeneric(request):
     if request.method == 'POST':
-        new_generic = Generics.objects.create(name=request.POST['name'])
-        m1 = Manufacturers.objects.get(id=(request.session['manufacturer']))
-        new_disease = Diseases.objects.get(id=(request.POST['disease']))
-        new_generic.manufacturer.add(m1)
-        new_generic.disease.add(new_disease)
-        new_generic.save()
+        dis = Diseases.objects.get(id=request.POST['disease'])
+        man = Manufacturers.objects.get(id=request.POST['manufacturer'])
+        relDrug = Drug.objects.get(id=request.POST['drug'])
+        new_generic = Generics.objects.create(name=request.POST['name'],manufacturer = man, disease = dis, drug = relDrug)
     return redirect('/inputinfo')
 
+def diseaseinput(request):
+    if request.method == 'POST':
+        new_disease = Diseases.objects.create(name=request.POST['name'])
+    return redirect('/inputinfo')
 
 def inputinfo(request):
     context = {
@@ -59,3 +58,32 @@ def inputinfo(request):
         'diseases': Diseases.objects.all(),
     }
     return render(request, 'inputinfo.html', context)
+
+
+def patients(request):
+    context = {
+        'patients': Patient.objects.all(),
+    }
+    return render(request, 'patient.html', context)
+
+def programs(request):
+    context = {
+        'programs': Program.objects.all(),
+    }
+    return render(request, 'programlist.html', context)
+
+def patinfo(request, patient_id):
+    context = {
+        'patient' : Patient.objects.get(id=patient_id),
+        'drugs': Drug.objects.all(),
+        'diseases': Diseases.objects.all(),
+    }
+    return render(request, 'inputpatinfo.html', context)
+
+def inputpatient(request):
+    if request.method == 'POST':
+        pat = Patient.objects.get(id=request.POST['patient'])
+        dis = Diseases.objects.get(id=request.POST['disease'])
+        relDrug = Drug.objects.get(id=request.POST['drug'])
+        new_info = PatientInfo.objects.create(patient=pat, insurance = request.POST['insurance'], gender = request.POST['gender'], resident = request.POST['resident'], veteran=request.POST['veteran'], disabled=request.POST['disabled'],allergies=request.POST['allergies'],yearly_income=request.POST['yearly_income'],household_income=request.POST['household_income'],health_conditions=request.POST['healthconditions'], diseases=dis, drug=relDrug)
+    return redirect('/inputinfo')

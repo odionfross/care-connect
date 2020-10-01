@@ -41,8 +41,27 @@
   }
   
   #care_body {
-    display: flex;
+    display: -webkit-inline-box;
     /*margin: 10px 30px;*/
+  }
+
+  #datainput table{
+    color: darkblue;
+  }
+
+  .table-dark td, .table-dark th, .table-dark thead th{
+    color: #fff;
+    background-color: #343a40;
+  }
+
+  .inputbox{
+    border: solid black 5px;
+  }
+
+  .rsidebody{
+    display: inline-block;
+    vertical-align: top;
+    width: 85%;
   }
   
   .sidenav {
@@ -273,3 +292,149 @@
     margin: auto 350px;
   }
   
+  /*patient.html styles start here*/
+#patient_btn {
+  background-color: #00e6ac;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+}
+/*patient.html styles end here*/
+
+
+/*allpatients.html styles start here*/
+#patient_top {
+  margin: 15px;
+}
+
+#allpatients_tab {
+  background-color: white;
+}
+
+.connection_block {
+  margin-bottom: 20px;
+}
+
+.connection {
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+}
+
+.connection_detail {
+  display: flex;
+  background-color: white;
+}
+
+.connection_info {
+  background-color: #f9f6f6;
+  margin-left: 15px;
+}
+
+.connection_left {
+  width: 50%;
+  /*background-color: white;*/
+}
+
+.connection_right {
+  width: 50%;
+  /*background-color: white;*/
+}
+
+.paytype_btn {
+  color: #e02d87;
+  background-color: #f9c4cd;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 300px;
+}
+
+.copay_amount {
+  margin-left: 305px;
+}
+
+.copay_cost {
+  margin-left: 270px;
+}
+
+.learn_btn {
+  color: #00e6ac;
+  border: 2px solid #00e6ac;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  margin-left: 155px;
+}
+
+.applynow_btn {
+  /*margin-left: 270px;*/
+  margin-bottom: 10px;
+  width: 125px;
+  background-color: #00e6ac;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 12px;
+}
+
+.connection_check {
+  /*background-color: white;*/
+  margin-right: 30px;
+}
+/*allpatients.html styles ends here*/
+
+
+
+/*application.html styles starts here*/
+#newcus {
+  background-color: white;
+}
+
+#pt_name {
+  margin-right: 350px;
+}
+
+#patient_name {
+  width: 430px;
+}
+.newpatient_info {
+  display: flex;
+  background-color: white;
+}
+
+.patient_data {
+  width: 30%;
+  background-color: white;
+}
+
+#address {
+  width: 800px;
+}
+
+#city {
+  margin-right: 250px;
+}
+
+#state {
+  margin-right: 250px;
+}
+
+#zip {
+  margin-right: 250px;
+}
+
+#state_data {
+  margin-left: 100px;
+}
+
+#zip_data {
+  margin-left: 100px;
+}
+
+
+/*application.html styles ends here*/

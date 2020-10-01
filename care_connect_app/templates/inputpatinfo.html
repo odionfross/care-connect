@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Care Connect</title>
+    {% load static %}
+</head>
+
+<body id="datainput">
+
+    {% include 'header.html' %}
+    {% include 'sidebar.html' %}
+    <div class="rsidebody">
+        <h1>Please input information for {{patient.first_name}} {{patient.last_name}}</h1>
+        <form action="/inputpatient" method="POST">
+            {% csrf_token %}
+            <!-- <input type="radio" name="patient" id="patient" value="{{patient.id}}">
+            <label for="patient">{{patient.first_name}} {{patient.last_name}}</label> -->
+            <h4>Insurance:</h4>
+            <input type="text" name="insurance">
+            <h4>Gender:</h4>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <div>
+                <h4>Is the Patient a Resident?</h4>
+                <input type="radio" name="resident" value="True" id="resident">
+                <label for="resident"> Patient is a Resident</label><br>
+                <input type="radio" name="resident" value="False" id="nonresident">
+                <label for="nonresident"> Patient is NOT a Resident</label><br>
+            </div>
+            <div>
+                <h4>Is the Patient a Veteran?</h4>
+                <input type="radio" name="veteran" value="True" id="veteran">
+                <label for="veteran"> Patient is a Veteran</label><br>
+                <input type="radio" name="veteran" value="False" id="nonveteran">
+                <label for="nonveteran"> Patient is NOT a Veteran</label><br>
+            </div>
+            <div>
+                <h4>Is the Patient disabled?</h4>
+                <input type="radio" name="disabled" value="True" id="disabled">
+                <label for="disabled"> Patient is disabled</label><br>
+                <input type="radio" name="disabled" value="False" id="nondisabled">
+                <label for="nondisabled"> Patient is NOT a disabled</label><br>
+            </div>
+            <h4>Please list the patients allergies:</h4>
+            <input type="text" name="allergies" id="allergies"><br>
+            <h4>Household Income</h4>
+            <input type="number" name="household_income" id="household_income">
+            <h4>Yearly Income</h4>
+            <input type="number" name="yearly_income" id="yearly_income"><br>
+            <h4>Health Conditions:</h4>
+            <input type="text" name="healthconditions" id="healthconditions"><br>
+            <h5>Disease:</h5>
+            <select name="disease" id="disease">
+                {% for disease in diseases %}
+                <option value="{{disease.id}}">{{disease.name}}</option>
+                {% endfor %}
+            </select><br>
+            <h5>Drug:</h5>
+            <select name="drug" id="drug">
+                {% for drug in drugs %}
+                <option value="{{drug.id}}">{{drug.name}}</option>
+                {% endfor %}
+            </select><br>
+            <input type="hidden" name="patient" value="{{patient.id}}">
+            <input type="submit" value="Submit" class="btn btn-success">
+        </form>
+    </div>
+</body>
+
+</html>

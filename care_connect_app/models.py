@@ -28,17 +28,17 @@ class Diseases(models.Model):
 
 class Drug(models.Model):
     name = models.CharField(max_length=255)
-    manufacturer = models.ManyToManyField(Manufacturers)
-    disease = models.ManyToManyField(Diseases)
+    manufacturer = models.ForeignKey(Manufacturers,on_delete=models.CASCADE)
+    disease = models.ForeignKey(Diseases, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 
 class Generics(models.Model):
     name = models.CharField(max_length=255)
-    manufacturer = models.ManyToManyField(Manufacturers)
-    disease = models.ManyToManyField(Diseases)
-    drug = models.ManyToManyField(Drug)
+    manufacturer = models.ForeignKey(Manufacturers, on_delete=models.CASCADE)
+    disease = models.ForeignKey(Diseases, on_delete=models.CASCADE)
+    drug = models.ForeignKey(Drug, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -57,7 +57,7 @@ class Program(models.Model):
     otherinc = models.CharField(max_length=255)
     active = models.BooleanField(default=True)
     form = models.ForeignKey(ProgForms, on_delete=models.CASCADE, blank=True)
-    disease = models.ManyToManyField(Diseases)
+    disease = models.ForeignKey(Diseases, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -70,7 +70,7 @@ class Patient(models.Model):
     phone = models.CharField(max_length=10)
     email = models.EmailField(max_length=255)
     ssn = models.CharField(max_length=11)
-    status = models.CharField(max_length=255, default='Active')
+    status = models.CharField(max_length=255, default='New')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -86,8 +86,8 @@ class PatientInfo(models.Model):
     yearly_income = models.IntegerField()
     household_income = models.IntegerField()
     health_conditions = models.CharField(max_length=255)
-    diseases = models.ManyToManyField(Diseases)
-    drug = models.ManyToManyField(Drug)
+    diseases = models.ForeignKey(Diseases,on_delete=models.CASCADE)
+    drug = models.ForeignKey(Drug,on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

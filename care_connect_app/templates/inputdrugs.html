@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 <body>
     <form action="/inputdrugs" method="POST">
@@ -8,7 +9,7 @@
         <label for="drugname">Drug Name</label>
         <input type="text" name="name" class="form-control" placeholder="Drug Name" id="drugname">
         <h5>Manufacturer:</h5>
-        <select name="manufacturer" id="manufacturer">
+        <select name="manufacturer">
             {% for manufacturer in manufacturers %}
             <option value="{{manufacturer.id}}">{{manufacturer.name}}</option>
             {% endfor %}
@@ -26,7 +27,6 @@
         <h1>Drugs:</h1>
         <thead>
             <tr>
-                <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Manufacturer</th>
                 <th scope="col">Diseases</th>
@@ -35,7 +35,6 @@
         <tbody>
             {% for drug in drugs %}
             <tr>
-                <th scope="row">{{drug.id}}</th>
                 <td>{{drug.name}}</td>
                 <td>{{drug.manufacturer.name}}</td>
                 <td>{{drug.disease.name}}</td>

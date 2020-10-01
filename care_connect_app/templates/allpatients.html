@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Connect</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include 'header.html' %}
+    {% include 'sidebar.html' %}
+		<div>
+			<span id="patient_top">< All Patients</span>
+			<div id="detail_top">
+				<h2 id="detail_top_title">Sean Williams</h2>
+				<div id="detail_top_details">
+					<span><b>Address : </b> St Lious MD, P O Box 66858</span>
+					<span><b>Phone Number : </b> 1-800-707-8965</span>
+					<span><b>Fax Number : </b> 1-800-707-8965</span>
+					<span><b>Website : </b> connecttocare.com</span>
+				</div>
+			</div>
+			<div class="container" id="detail_bottom">
+			  	<ul class="nav nav-tabs" id="allpatients_tab">
+				    <li class="active"><a href="#">Eligible Programs</a></li>
+				    <li><a href="#">Approved Programs</a></li>
+				    <li><a href="#">Patient Information</a></li>
+				    <li><a href="#">Activity Log</a></li>
+				</ul>
+				<br>
+				<div class="connection_block">
+					<h4 class="connection">Connection to Care</h4>
+				  	<div class="connection_detail">
+				  		<div class="connection_left">
+				  			<h5 class="connection_info">Ibrance is manufactured by Pfizer Inc</h5>
+				  			<h6 class="connection_info">Pays up to $15000 per year</h6>
+				  			<span class="connection_info">but no more than your actual out of pocket expenses</span>
+				  			<h6 class="connection_info">Maximum household income limit</h6>
+				  			<h6 class="connection_info">$85000</h6>
+				  		</div>
+				  		<div class="connection_right">
+				  			<button class="paytype_btn">Copay</button>
+				  			<br>
+				  			<span class="copay_amount"><b>$25</b>/ Treatment</span>
+				  			<h6 class="copay_cost">out of pocket drug cost</h6>
+				  			<button class="learn_btn">Learn More</button>
+				  			<button class="applynow_btn">Apply Now</button>
+				  		</div>
+				  	</div>
+				  	<hr>
+				  	<input type="checkbox" name="Mark ineligible" value="Mark ineligible">
+				  	<label for="Mark ineligible" class="connection_check"> Mark ineligible</label>
+				  	<input type="checkbox" name="Forms completed" value="Forms completed">
+				  	<label for="Forms completed" class="connection_check"> Forms completed</label>
+				  	<input type="checkbox" name="Forms signed" value="Forms signed">
+				  	<label for="Forms signed" class="connection_check"> Forms signed</label>
+				  	<input type="checkbox" name="Forms Faxed" value="Forms Faxed">
+				  	<label for="Forms Faxed" class="connection_check"> Forms Faxed</label>
+				  	<input type="checkbox" name="Application approved" value="Application approved">
+				  	<label for="Application approved" class="connection_check"> Application approved</label>
+				</div>
+				<div class="connection_block">
+					<h4 class="connection">Connection to Care</h4>
+				  	<div class="connection_detail">
+				  		<div class="connection_left">
+				  			<h5 class="connection_info">Avastin is manufactured by Genetech</h5>
+				  			<h6 class="connection_info">Pays up to $30000 per year</h6>
+				  			<span class="connection_info">but no more than your actual out of pocket expenses</span>
+				  			<h6 class="connection_info">Maximum household income limit</h6>
+				  			<h6 class="connection_info">$95000</h6>
+				  		</div>
+				  		<div class="connection_right">
+				  			<button  class="paytype_btn">Grant</button>
+				  			<br>
+				  			<span class="copay_amount"><b>$25</b>/ Treatment</span>
+				  			<h6 class="copay_cost">out of pocket drug cost</h6>
+				  			<button class="learn_btn">Learn More</button>
+				  			<button class="applynow_btn">Apply Now</button>
+				  		</div>
+				  	</div>
+				  	<hr>
+				  	<input type="checkbox" name="Mark ineligible" value="Mark ineligible">
+				  	<label for="Mark ineligible" class="connection_check"> Mark ineligible</label>
+				  	<input type="checkbox" name="Forms completed" value="Forms completed">
+				  	<label for="Forms completed" class="connection_check"> Forms completed</label>
+				  	<input type="checkbox" name="Forms signed" value="Forms signed">
+				  	<label for="Forms signed" class="connection_check"> Forms signed</label>
+				  	<input type="checkbox" name="Forms Faxed" value="Forms Faxed">
+				  	<label for="Forms Faxed" class="connection_check"> Forms Faxed</label>
+				  	<input type="checkbox" name="Application approved" value="Application approved">
+				  	<label for="Application approved" class="connection_check"> Application approved</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
