@@ -12,7 +12,7 @@ urlpatterns = [
 	path('programs', views.programs),
 	path('disease', views.diseaseinput),
 	path('patinfo/<int:patient_id>', views.patinfo),
-	path('inputpatient', views.inputpatient),
+	path('inputpatientinfo', views.inputpatientinfo),
 	path('inputprog', views.inputprog),
 	path('inputprogform', views.inputprogform),
 	path('application', views.application),

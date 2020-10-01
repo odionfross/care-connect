@@ -82,7 +82,7 @@ def patinfo(request, patient_id):
     }
     return render(request, 'inputpatinfo.html', context)
 
-def inputpatient(request):
+def inputpatientinfo(request):
     if request.method == 'POST':
         pat = Patient.objects.get(id=request.POST['patient'])
         dis = Diseases.objects.get(id=request.POST['disease'])

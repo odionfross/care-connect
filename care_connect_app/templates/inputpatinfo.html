@@ -16,7 +16,7 @@
     {% include 'sidebar.html' %}
     <div class="rsidebody">
         <h1>Please input information for {{patient.first_name}} {{patient.last_name}}</h1>
-        <form action="/inputpatient" method="POST">
+        <form action="/inputpatientinfo" method="POST">
             {% csrf_token %}
             <!-- <input type="radio" name="patient" id="patient" value="{{patient.id}}">
             <label for="patient">{{patient.first_name}} {{patient.last_name}}</label> -->
